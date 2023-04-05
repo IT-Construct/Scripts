@@ -17,12 +17,6 @@ Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools -Restart
 Install-WindowsFeature RSAT-AD-Powershell
 # Module 4: Create AD Forest, OU, and Users 
 # Prompt user for Forest name, OU name and user details 
-
-$OUName = Read-Host "Enter OU Name" 
-$AdminUser = Read-Host "Enter Administrator Username" 
-$AdminPassword = Read-Host -AsSecureString "Enter Administrator Password" 
-$UserName = Read-Host "Enter User Name" 
-$UserPassword = Read-Host -AsSecureString "Enter User Password" 
 # Create AD Forest 
 Import-Module ADDSDeployment
 Install-ADDSForest `
