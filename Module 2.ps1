@@ -1,6 +1,6 @@
 # Module 2: Install AD-Domain-Services 
 # Install the AD-Domain-Services feature 
-Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools -Restart
+Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 Install-WindowsFeature RSAT-AD-Powershell
 
 # Prompt user for Forest name, OU name and user details 
