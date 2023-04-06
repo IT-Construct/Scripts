@@ -34,3 +34,5 @@ Import-Csv $csvPath | ForEach-Object {
             -Path “OU=$department,DC=corp,DC=greendata,DC=com”
     }
 }
+$NewName = Read-Host "Enter a new name for the Windows Server VM" 
+Rename-Computer -NewName $NewName
