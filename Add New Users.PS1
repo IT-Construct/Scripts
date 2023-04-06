@@ -8,6 +8,7 @@ Import-Csv $csvPath | ForEach-Object {
     $name = $_.Name
     $firstName = $_.GivenName
     $lastName = $_.Surname
+    $title = $_.Title
     $username = $_.samAccountName
     $department = $_.Department
     # Create a new user account
@@ -16,6 +17,7 @@ Import-Csv $csvPath | ForEach-Object {
         -Name $name `
         -GivenName $firstName `
         -Surname $lastName `
+        -Title $title `
         -SamAccountName $username `
         -Path “OU=$department,DC=corp,DC=greendata,DC=com”
     }
