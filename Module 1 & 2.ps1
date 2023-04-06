@@ -7,3 +7,7 @@ $DNS = Read-Host "Enter DNS Server"
 # Set the static IP address and DNS server 
 New-NetIPAddress -InterfaceAlias Ethernet -IPAddress $IP -PrefixLength $SubnetMask -DefaultGateway $Gateway 
 Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddresses $DNS 
+# Module 2: Rename the Windows Server VM 
+# Prompt user for a new name for the Windows Server VM and rename it 
+$NewName = Read-Host "Enter a new name for the Windows Server VM" 
+Rename-Computer -NewName $NewName -Restart 
