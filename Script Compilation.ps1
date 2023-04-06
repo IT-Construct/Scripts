@@ -18,8 +18,6 @@ Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddresses $DNS
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools -Restart
 Install-WindowsFeature RSAT-AD-Powershell
 
-
-# Module 3: Create AD Forest, OU, and Users 
 # Prompt user for Forest name, OU name and user details 
 # Create AD Forest 
 Import-Module ADDSDeployment
@@ -36,6 +34,7 @@ Install-ADDSForest `
 -SysvolPath "C:\Windows\SYSVOL" `
 -Force:$true
 
+# Module 3: Create OUs and Users
 # Import the ActiveDirectory module
 Import-Module ActiveDirectory
 
