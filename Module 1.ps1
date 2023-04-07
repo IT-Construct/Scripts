@@ -9,3 +9,6 @@ $DNS = Read-Host "Enter DNS Server"
 # Set the static IP address and DNS server 
 New-NetIPAddress -InterfaceAlias Ethernet -IPAddress $IP -PrefixLength $SubnetMask -DefaultGateway $Gateway 
 Set-DnsClientServerAddress -InterfaceAlias Ethernet -ServerAddresses $DNS 
+
+
+# This script was created by Lamin Touray
